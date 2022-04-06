@@ -9,4 +9,15 @@ Some of them seems to adjust more to the Galaxycore's GC9106 TFT driver IC
 
 So, here is my (minimal) correction to the driver
 
+In order to make it work, you need to replace (and add) the repository files.
+Also, you need to add the following flags
+
+build_flags =
+
+;minimal TFT display config flags	
+	-D USER_SETUP_LOADED=1
+	-D GC9106_DRIVER=1
+	-D TFT_RGB_ORDER=TFT_RGB
+	-D TFT_INVERSION_ON
+	
 
