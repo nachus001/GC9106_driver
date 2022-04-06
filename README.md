@@ -9,15 +9,15 @@ Some of them seems to adjust more to the Galaxycore's GC9106 TFT driver IC
 
 So, here is my (minimal) correction to the driver
 
-In order to make it work, you need to replace (and add) the repository files.
-Also, you need to add the following flags
+In order to make it work, you need to replace (and add) the repository files to the library structure.
+Also, you need to add the following flags to platformio.ini
 
 build_flags =
 
-;minimal TFT display config flags	
+;minimal TFT display config flags, aside from the i/o pins and clock speed	
 	-D USER_SETUP_LOADED=1
 	-D GC9106_DRIVER=1
-	-D TFT_RGB_ORDER=TFT_RGB
-	-D TFT_INVERSION_ON
+	-D TFT_RGB_ORDER=TFT_RGB	;or TFT_BGR
+	-D TFT_INVERSION_ON		;or TFT_INVERSION_OFF
 	
 
